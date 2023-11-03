@@ -1,0 +1,25 @@
+body {
+    background-color: lightslategray;
+}
+
+.DetailedView {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: large;
+    color: black;
+
+}
+
+.Card {
+    height: 22rem;
+}
+
+.Comments {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+
+}
