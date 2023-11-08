@@ -1,7 +1,6 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Card from "../Components/Card";
+import { Container } from "react-bootstrap";
 import { DetailContext } from "../App";
-import { createContext, useContext } from "react";
+import {  useContext } from "react";
 import {useParams} from 'react-router-dom';
 
 
@@ -9,8 +8,8 @@ function DetailedView() {
 
     const param = useParams();
     const store = useContext(DetailContext);
-    const card = store.cachedCards[param.id];
-    console.log(card);
+    const card = store.mockData[param.id];
+    
 
 
     return(

@@ -1,6 +1,6 @@
 import {
   Container_default
-} from "./chunk-2QPALS2B.js";
+} from "./chunk-ANZP6Q6L.js";
 import {
   AbstractModalHeader_default,
   CloseButton_default,
@@ -58,10 +58,10 @@ import {
   useWaitForDOMRef,
   useWillUnmount,
   useWindow
-} from "./chunk-3I56QOPQ.js";
+} from "./chunk-VBXG3CF6.js";
 import {
   require_react_dom
-} from "./chunk-MDIHFEFG.js";
+} from "./chunk-DZXRV6RW.js";
 import {
   DEFAULT_BREAKPOINTS,
   DEFAULT_MIN_BREAKPOINT,
@@ -71,15 +71,17 @@ import {
   useBootstrapMinBreakpoint,
   useBootstrapPrefix,
   useIsRTL
-} from "./chunk-UPEODZRQ.js";
+} from "./chunk-7YVZ2DEQ.js";
 import {
   require_jsx_runtime
-} from "./chunk-SKK3I4F6.js";
+} from "./chunk-KZBIRVQL.js";
+import {
+  require_react
+} from "./chunk-ZAUFE7H7.js";
 import {
   __commonJS,
-  __toESM,
-  require_react
-} from "./chunk-L7APZED3.js";
+  __toESM
+} from "./chunk-UXIASGQL.js";
 
 // node_modules/warning/warning.js
 var require_warning = __commonJS({

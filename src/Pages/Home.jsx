@@ -3,27 +3,35 @@ import Card from "../Components/Card";
 import { DetailContext } from "../App";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import {db} from "../firebase";
+import { onValue, ref } from "firebase/database";
+
+
+
+
 
 function Home() {
+        
+        const store = useContext(DetailContext);
+        const [cardList, setCardList] = useState([]);
+        
 
-    const store = useContext(DetailContext);
-
-    const [cardList, setCardList] = useState([]);
-
-    useEffect(function() {
-        fetch("https://remotemode.com/files/intership/front-end/financial-market-news-blog-project.json?limit=6"
-         )
-            .then((response) => {
-                return response?.json();
-        })
-        .then((data) => {
-            setCardList(data.slice(0, 6));
-            store.cachedCards=data;
-        })
-        .catch(function(error) {  
-            console.log('Request failed', error)  
-          });
-    }, [])  
+        useEffect(()=> {
+            
+            const starCountRef = ref(db, '/');
+            onValue(starCountRef, (snapshot) => {
+                const data = snapshot.val();
+                const mockData = Object.keys(data.slice(0, 6)).map(key => ({
+                    id:key,
+                    ...data[key],
+                }));
+                console.log("mockData", mockData);
+                setCardList(mockData);
+                store.mockData=mockData;
+              
+            });
+        }, [])
+ 
 
     return (
         <Container style={{padding: "20px 40px"}}>

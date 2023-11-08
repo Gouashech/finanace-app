@@ -14,11 +14,13 @@ export const DetailContext = createContext();
 
 function App() {
 
+  
+
   React.createContext();
 
   return (
     <BrowserRouter>
-      <DetailContext.Provider value={{}}>
+      <DetailContext.Provider  value={{}}>
         <Header/>
             <Routes>
               <Route index path="/" element={<Home/>}/>

@@ -6,7 +6,7 @@ function Header() {
     return (
         <Navbar bg="dark" data-bs-theme="dark-blue">
         <Container >
-          <Navbar.Brand style={{"color": "white", "font-weight": "bold"}} href="/">SHARETRADE.COM</Navbar.Brand>
+          <Navbar.Brand style={{"color": "white"}} href="/">SHARETRADE.COM</Navbar.Brand>
           
         </Container>
       </Navbar>

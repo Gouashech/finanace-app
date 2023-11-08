@@ -1,0 +1,123 @@
+це код компонета app.jsx:
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Header from './Components/Header';
+import DetailedView from './Pages/DetailedView'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { createContext } from 'react';
+import './App.css';
+
+
+export const DetailContext = createContext();
+
+
+
+function App() {
+
+  React.createContext();
+
+  return (
+    <BrowserRouter>
+      <DetailContext.Provider value={{}}>
+        <Header/>
+            <Routes>
+              <Route index path="/" element={<Home/>}/>
+              <Route index path="/details/:id" element={<DetailedView/>}/>
+            </Routes>
+      </DetailContext.Provider>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+це код компонента home.jsx:
+import { Container, Row, Col } from "react-bootstrap";
+import Card from "../Components/Card";
+import { DetailContext } from "../App";
+import { useEffect, useState, useContext, createContext } from "react";
+import { Link } from "react-router-dom";
+import {db} from "../firebase";
+import { onValue, ref } from "firebase/database";
+
+
+
+
+
+function Home() {
+        
+    
+
+        const store = useContext(DetailContext);
+        const [cardList, setCardList] = useState([]);
+        
+
+        useEffect(()=> {
+            
+            const starCountRef = ref(db, '/');
+            onValue(starCountRef, (snapshot) => {
+                const data = snapshot.val();
+                const mockData = Object.keys(data.slice(0, 6)).map(key => ({
+                    id:key,
+                    ...data[key],
+                }));
+                setCardList(mockData);
+              
+            })
+        }, [])
+ return (
+        <Container style={{padding: "20px 40px"}}>
+            
+            <Row  sm={2} md={3} className="g-4">
+                {cardList.map((card, idx) => (
+                    <Col key={idx}>
+                        <Link to={"/details/"+ idx} style={{"textDecoration": "none"}}>   
+                            <Card 
+                                imageUrl={card.imageUrl} 
+                                title={card.title}
+                                description={card.description}
+                            />
+                        </Link> 
+                    </Col>
+                    ))}
+            </Row>
+        </Container>
+    )
+}
+
+export default Home;
+це код компонента detailedview.jsx:
+import { Container } from "react-bootstrap";
+import { DetailContext } from "../App";
+import {  useContext } from "react";
+import {useParams} from 'react-router-dom';
+
+
+function DetailedView() {
+
+    const param = useParams();
+    const store = useContext(DetailContext);
+    const card = store.cachedCards[param.id];
+    
+
+
+    return(
+            <Container className="DetailedView" >
+                <h1>{card.title}</h1>
+                <img src={card.imageUrl} alt="woopsie" />
+                <p>{card.description}</p>
+                <p className="Comments">
+                <b>Experts Comment</b>
+                <br />
+                <br />
+                {card.expertComment}
+                </p>
+                
+                
+                
+            </Container>
+    )
+}
+
+export default DetailedView;
+чому при переході на на DetailedView рендериться помилка Cannot read properties of undefined (reading '5')?

@@ -1,80 +1,98 @@
 {
-  "hash": "a89d35e7",
-  "browserHash": "651d894f",
+  "hash": "04abd249",
+  "browserHash": "2f7bef6f",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "a95f669c",
+      "fileHash": "61fe8fe0",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "57937f29",
+      "fileHash": "80dc4458",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "fcd4f298",
+      "fileHash": "5a48c9b4",
       "needsInterop": true
     },
     "react-bootstrap": {
       "src": "../../node_modules/react-bootstrap/esm/index.js",
       "file": "react-bootstrap.js",
-      "fileHash": "fe72492c",
+      "fileHash": "40cc9166",
       "needsInterop": false
     },
     "react-bootstrap/Container": {
       "src": "../../node_modules/react-bootstrap/esm/Container.js",
       "file": "react-bootstrap_Container.js",
-      "fileHash": "78fc1aea",
+      "fileHash": "a2a2d13e",
       "needsInterop": false
     },
     "react-bootstrap/Navbar": {
       "src": "../../node_modules/react-bootstrap/esm/Navbar.js",
       "file": "react-bootstrap_Navbar.js",
-      "fileHash": "33ebc4c4",
+      "fileHash": "b43d9662",
       "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "861679dd",
+      "fileHash": "263660d5",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../../../../../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "c0a5b73e",
+      "fileHash": "f4cc270c",
       "needsInterop": false
     },
-    "react-router": {
-      "src": "../../node_modules/react-router/dist/index.js",
-      "file": "react-router.js",
-      "fileHash": "c2885923",
+    "firebase/app": {
+      "src": "../../node_modules/firebase/app/dist/esm/index.esm.js",
+      "file": "firebase_app.js",
+      "fileHash": "a1c193b1",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "4fb536ab",
+      "needsInterop": false
+    },
+    "firebase/database": {
+      "src": "../../node_modules/firebase/database/dist/esm/index.esm.js",
+      "file": "firebase_database.js",
+      "fileHash": "a61e758e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-2QPALS2B": {
-      "file": "chunk-2QPALS2B.js"
+    "chunk-PG44P67X": {
+      "file": "chunk-PG44P67X.js"
     },
-    "chunk-3I56QOPQ": {
-      "file": "chunk-3I56QOPQ.js"
+    "chunk-ANZP6Q6L": {
+      "file": "chunk-ANZP6Q6L.js"
     },
-    "chunk-MDIHFEFG": {
-      "file": "chunk-MDIHFEFG.js"
+    "chunk-VBXG3CF6": {
+      "file": "chunk-VBXG3CF6.js"
     },
-    "chunk-UPEODZRQ": {
-      "file": "chunk-UPEODZRQ.js"
+    "chunk-DZXRV6RW": {
+      "file": "chunk-DZXRV6RW.js"
     },
-    "chunk-SKK3I4F6": {
-      "file": "chunk-SKK3I4F6.js"
+    "chunk-7YVZ2DEQ": {
+      "file": "chunk-7YVZ2DEQ.js"
     },
-    "chunk-L7APZED3": {
-      "file": "chunk-L7APZED3.js"
+    "chunk-KZBIRVQL": {
+      "file": "chunk-KZBIRVQL.js"
+    },
+    "chunk-ZAUFE7H7": {
+      "file": "chunk-ZAUFE7H7.js"
+    },
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
     }
   }
 }
